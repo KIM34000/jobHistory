@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    grid-template-columns: 30% 40% 30%; 
+    grid-gap: 20px;
+    grid-template-rows: 1fr 0.5fr 0.2fr;
+}
+
+.names { 
+    margin-top: 20px;    
+    grid-column: 1; 
+    grid-row: 1;
+}
+.person-data {
+    margin-top: 20px;
+}
+.person-data li:hover {
+    background-color: #f0f0f0;
+}
+
+.person-info {
+    margin-top: 20px;
+    grid-column: 2 / span 2; 
+    grid-row: 1 / span 2;
+}
+
+.current-time {
+    grid-column: 3; 
+    grid-row: 3;
+}
+.neumorphic {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #c7c7c7, -5px -5px 10px #ffffff;
+    padding: 10px;
+  }
+
+@media (max-width: 767px) {
+    
+    .container {
+        grid-template-columns: 100%; 
+    }
+
+    .person-info,
+    .current-time {
+        grid-column: 1;
+    }
+}
